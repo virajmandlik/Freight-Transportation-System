@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Scan to Pay</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        h2 {
+            color: #4285f4;
+        }
+        img {
+            max-width: 300px;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 20px 0;
+        }
+        .upi-link {
+            display: inline-block;
+            background-color: #0f9d58;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            margin: 10px 0;
+        }
+        .upi-link:hover {
+            background-color: #0b8043;
+        }
+    </style>
+</head>
+<body>
+    <h2>Scan to Pay ₹{{ amount }}</h2>
+    <p>To UPI ID: <b>{{ upi_id }}</b></p>
+
+    <img src="{{ url_for('static', filename='qrs/' + qr_file) }}" alt="QR Code">
+
+    <div>
+        <a href="{{ upi_url }}" class="upi-link">Pay using UPI app</a>
+    </div>
+
+    <p><i>After paying, you can manually check your UPI app for confirmation.</i></p>
+
+    <div style="margin-top: 20px;">
+        <a href="/">Generate Another QR</a>
+    </div>
+</body>
+</html>

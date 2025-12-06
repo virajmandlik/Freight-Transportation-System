@@ -1,0 +1,85 @@
+.login-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #000;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .decorative-circle {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    filter: blur(30px);
+    opacity: 0.5;
+  }
+  
+  .decorative-circle.blue {
+    background-color: #2196F3;
+    top: 20%;
+    left: 10%;
+  }
+  
+  .decorative-circle.orange {
+    background-color: #FF9800;
+    bottom: 20%;
+    right: 10%;
+  }
+  
+  .login-box {
+    background-color: #1a1a1a;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 320px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .login-title {
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  .form-group label {
+    display: block;
+    color: #888;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .role-select {
+    width: 100%;
+    padding: 0.5rem;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  .login-button {
+    width: 80%;
+    padding: 0.75rem;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .login-button:hover {
+    background-color: #ddd;
+  }
